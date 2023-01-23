@@ -1,0 +1,23 @@
+{% extends 'main.html' %}
+{% block content%}
+
+<div class="signup-form-container">
+    <h1>Doctor Form</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {% for field in form %}
+
+        <div class="form-group">
+            <label for="username">{{field.label}}</label>
+            {{field}}
+
+        </div>
+        {%endfor%}  
+        <div class="form-group">
+            <input type="submit" value="Save Form" class="btn btn-primary">
+        </div> 
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{%extends 'main.html'%}
+{% block content %}
+{% load static %}
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      /* Responsive layout for mobile devices */
+      .column {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* Style the images */
+      .image-type {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+      }
+
+      /* Add a hover effect for the selected image */
+      .image-type:hover {
+        border: 2px solid #ddd;
+      }
+
+      /* Style the radio buttons */
+      input[type="radio"] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body> -->
+      <form action=""method="POST">
+    <div class="column">
+        {%csrf_token%}
+       <label>Doctor 
+      <!--  <img class="image-type" src="{% static 'images/doctor.png' %}" onclick="document.getElementById('img1').checked = true;"> -->
+        <input type="radio" id="img1" name="image" value="doctor" required>
+      </label>
+      <label>Patient
+        <!-- <img class="image-type" src="{% static 'images/patient.png' %}" onclick="document.getElementById('img2').checked = true;"> -->
+        <input type="radio" id="img2" name="image" value="patient" required>
+      </label>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+  <!-- </body>
+</html>     -->
+
+{% endblock %}

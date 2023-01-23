@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="add_home_detail">
+    <div class="left_home_wel">Hi {{request.user.username}},</div>
+    <div class="right_home_mem">
+        <a href="{% url 'patient_form' %}">+ Add Member</a>
+    </div>
+</div>
+
+
+
+{% endblock content %}
