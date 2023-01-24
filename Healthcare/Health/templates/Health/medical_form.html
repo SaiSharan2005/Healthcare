@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="medi_form">
+    
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h1>Medical Report</h1>
+        <div class="main_medical">
+            {% for field in form_basic %}
+            <div class="">
+                {{field.label}}
+            </div>
+            <div>
+                {{field}}
+            </div>
+            {% endfor %}
+        </div>
+        <div class="normal_medical">
+            {% for field in form_extra %}
+            <div class="">
+                {{field.label}}
+            </div>
+            <div>
+                {{field}}
+            </div>
+            {% endfor %}
+        </div>
+        <input type="submit" value="Save Form">
+</div>
+</form>
+
+
+{% endblock content %}

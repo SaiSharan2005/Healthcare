@@ -17,7 +17,8 @@ from django.contrib.auth.models import User
 #     street = models.CharField(max_length=30)
 #     city = models.CharField(max_length=30)
 #     state = models.CharField(max_length=30)
-#     country = models.CharField(max_length=30)
+#     country =  m
+# dels.CharField(max_length=30)
 
 #     def __str__(self):
 #         return self.street
@@ -26,7 +27,7 @@ from django.contrib.auth.models import User
 class Doctor(models.Model):
     host = models.OneToOneField(User, on_delete=models.CASCADE)
     Name = models.CharField(max_length=30)
-    Profile_pic = models.ImageField(upload_to='', null=True, default="avater.svg")
+    Profile_pic = models.ImageField(upload_to='', null=True, default="doctor.svg")
     Date_of_birth = models.DateField(null=True)
 
     street = models.CharField(max_length=100)
@@ -36,7 +37,11 @@ class Doctor(models.Model):
 
     Experience = models.PositiveIntegerField()
     Position = models.CharField(max_length=30)
-    Profession = models.CharField(max_length=30)
+    Profession = models.CharField(max_length=100)
+    About_me = models.TextField(max_length=500)
+    Education_from = models.CharField(max_length=100)
+    email = models.EmailField(blank= False)
+    mobile_number = models.IntegerField(blank = True)
 
 
 class Patient(models.Model):
@@ -54,3 +59,24 @@ class Patient(models.Model):
 
     def __str__(self):
         return self.user_name
+
+
+class Medical_Report(models.Model):
+    host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
+    person = models.ForeignKey(Patient,on_delete=models.CASCADE,null=True)
+    Report_name = models.CharField(max_length=100)    
+    Hospital = models.CharField(max_length=100)
+    Patient_name = models.CharField(max_length=100)
+    Doctor_name = models.CharField(max_length=100)
+    Date_of_scan = models.DateTimeField()
+    Date_of_recieved = models.DateTimeField()
+    Blood_pressure = models.IntegerField()
+    Sugar_level = models.IntegerField()
+
+    def __str__(self):
+        return self.Report_name
+
+class Extra_Values(models.Model):
+    Extra_parameters = models.OneToOneField(Medical_Report,on_delete= models.CASCADE,null=True)
+    parameter_name = models.CharField(max_length=100)
+    parameters_value = models.CharField(max_length=100)

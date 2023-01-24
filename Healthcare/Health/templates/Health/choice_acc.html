@@ -4,10 +4,9 @@
 {%for field in form %}
 
 <div class="child_acc">
-    <a href="{% url 'user' field.user_name%}">
+    <a href="{% url 'patient_profile' field.user_name%}">
 {{field.user_name}}
 </a>
-    <!-- user_relationship = models.CharField(max_length=30) -->
     <p>{{field.user_relationship}}</p>
 </div>
 {% endfor %}

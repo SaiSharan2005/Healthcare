@@ -8,7 +8,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color:#4CAF50;
+  background-color: #4CAF50;
   color: green;
 }
 
@@ -20,10 +20,11 @@ nav {
 .left-side a {
   font-size: 20px;
   font-weight: 700;
-  color:black;
+  color: black;
   text-decoration: none;
   margin-right: 20px;
 }
+
 .right-side a {
   font-size: 20px;
   color: black;
@@ -40,7 +41,7 @@ nav {
   border: 1px solid #e5e5e5;
 }
 
-.signup-form-container input{
+.signup-form-container input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -64,35 +65,36 @@ nav {
   background-color: #45a049;
 }
 
-.add_home_detail{
-  display:flex;
+.add_home_detail {
+  display: flex;
   justify-content: space-between;
 }
 
-.add_home_detail .left_home_wel{
+.add_home_detail .left_home_wel {
   margin: 20px 20px;
   font-size: 25px;
 }
-.add_home_detail .right_home_mem{
-  margin: 20px 20px;
+
+.add_home_detail .right_home_mem {
+  margin: 20px 5px;
   font-size: 20px;
 }
 
-.add_home_detail .right_home_mem a{
-  padding:5px;
-  text-decoration:none;
-  color:black;
+.add_home_detail .right_home_mem a {
+  padding: 5px;
+  text-decoration: none;
+  color: black;
   background-color: #57dc5d;
-  border-radius: 5px ;
+  border-radius: 5px;
 }
 
 
 @media (max-width: 768px) {
-    .signup-form-container {
-        width: 90%;
-        margin: 0 auto;
-        padding: 20px;
-    }
+  .signup-form-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
 }
 
 /* type_user */
@@ -119,4 +121,37 @@ nav {
 /* input[type="radio"] {
   display: none;
 } */
-    
+
+/* doctor_profile */
+.profile-container {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.profile-container .profile-header {
+  text-align: center;
+}
+
+.profile-picture img{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+
+.profile-name {
+  font-size: 2em;
+  margin-top: 20px;
+}
+
+.profile-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.profile-container .profile-info {
+  margin-top: 50px;
+}
+
+.profile-info h2 {
+  margin-top: 30px;
+}

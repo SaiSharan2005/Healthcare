@@ -1,0 +1,38 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<div class="add_home_detail">
+    <div class="left_home_wel">Hi {{form.user_name}},</div>
+    <!-- <div class="right_home_mem">
+    </div> -->
+    <div class="right_home_mem">
+        <a href="{% url 'choice_acc' %}">Change Member</a>
+        <a href="{% url 'patient_form' %}">+ Add Member</a>
+        <a href="{% url 'medical_form' form.user_name  %}">+ Add Report</a>
+    </div>
+</div>
+
+<div class="medical_show">
+    <h1> Your Medical Report</h1>
+    {% for divs in medical_report %}
+    <div class="box2">
+        <!-- <div class="left_report_show">
+            <img src="{{form.}}" alt="">
+        </div>
+        <div class="right_report_show">
+            
+        </div> -->
+        <a href=""><div class="box_med_report">
+            {{divs.Report_name}}
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptatibus, sint sunt ea dolores repudiandae aliquam aliquid ullam repellendus harum natus velit ducimus. Ab aliquam </p>
+
+        </div></a>
+
+    </div>
+
+    {% endfor %}
+
+
+</div>
+
+{% endblock content %}
