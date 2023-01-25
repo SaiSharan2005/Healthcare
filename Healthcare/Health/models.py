@@ -27,7 +27,7 @@ from django.contrib.auth.models import User
 class Doctor(models.Model):
     host = models.OneToOneField(User, on_delete=models.CASCADE)
     Name = models.CharField(max_length=30)
-    Profile_pic = models.ImageField(upload_to='', null=True, default="doctor.svg")
+    Profile_pic = models.ImageField(upload_to='', null=True, default="doctor.png")
     Date_of_birth = models.DateField(null=True)
 
     street = models.CharField(max_length=100)
@@ -42,7 +42,7 @@ class Doctor(models.Model):
     Education_from = models.CharField(max_length=100)
     email = models.EmailField(blank= False)
     mobile_number = models.IntegerField(blank = True)
-
+ 
 
 class Patient(models.Model):
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)

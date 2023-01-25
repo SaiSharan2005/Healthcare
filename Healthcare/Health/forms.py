@@ -19,7 +19,7 @@ from django.contrib.auth.models import User
 class DoctorCreationForm(ModelForm):
     class Meta:
         model = Doctor
-        fields = ["Name","Profile_pic","Date_of_birth","street","city","state","country","Experience","Position"]
+        fields = ["Name","email","mobile_number","Profile_pic","Date_of_birth","street","city","state","country","Experience","Position","Profession","About_me","Education_from"]
 
 class PatientCreationForm(ModelForm):
     class Meta:
