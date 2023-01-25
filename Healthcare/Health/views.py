@@ -39,7 +39,7 @@ def sign_up(request):
 
 def log_in(request):
     if request.method =="POST":
-        username = request.POST.get('username')
+        username = request.POST.get('username').lower()
         password = request.POST.get('password')
         user = authenticate(request,username=username,password=password)
         if user is not None:
@@ -114,7 +114,7 @@ def medical_report(request,pk):
     form_extra = ExtraValuesForm()
     patient = Patient.objects.get(user_name=pk)
     
-    print("dsaf")
+    # print("dsaf")
     if request.method =="POST":
         print("POST")
         form_basic = MedicalReportForm(request.POST)
