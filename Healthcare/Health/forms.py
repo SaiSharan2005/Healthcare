@@ -29,7 +29,7 @@ class PatientCreationForm(ModelForm):
 class MedicalReportForm(ModelForm):
     class Meta:
         model = Medical_Report
-        fields = ["Report_name","Hospital","Patient_name","Doctor_name","Date_of_scan","Date_of_recieved","Blood_pressure","Sugar_level"]
+        fields = ["Report_name","Hospital","Patient_name","Doctor_name","description","Date_of_scan","Date_of_recieved","doctor_prescription","Blood_pressure","Sugar_level"]
 
 class ExtraValuesForm(ModelForm):
     class Meta:

@@ -12,21 +12,39 @@
     </div>
 </div>
 
+
+<div class="choice_acc">
+    <div class="parent_choice_acc">
+        <div class="left">
+            <img src="{{form.profile_pic.url}}" alt="" ,width="100px">
+        </div>
+        <div class="child_acc">
+                <p>Your name :{{form.user_name}}</p>
+                <p>D.O.B : {{form.Date_of_birth}}</p>
+                <p>Father Name :{{form.father_name}}</p>
+            <!-- </a> -->
+            <!-- <p>He is Your {{field.user_relationship}}</p> -->
+
+        </div>
+    </div>
+</div>
+
+<h1> Your Medical Report</h1>
 <div class="medical_show">
-    <h1> Your Medical Report</h1>
     {% for divs in medical_report %}
     <div class="box2">
-        <!-- <div class="left_report_show">
-            <img src="{{form.}}" alt="">
-        </div>
-        <div class="right_report_show">
-            
-        </div> -->
-        <a href=""><div class="box_med_report">
-            {{divs.Report_name}}
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe voluptatibus, sint sunt ea dolores repudiandae aliquam aliquid ullam repellendus harum natus velit ducimus. Ab aliquam </p>
+        <!-- <div class="box_med_report"> -->
+        <a href="{% url 'medical_form_view' divs.id %}">
+            <h3>{{divs.Report_name}}</h3>
+            <p>{{divs.description}}</p>
+            <p>Hospital: {{divs.Hospital}}</p>
 
-        </div></a>
+            <!-- <ul>
+                <li>Hospital : {{divs.Hospital}}</li>
+                <li>Doctor Name: {{divs.Doctor_name}}</li>
+            </ul> -->
+
+        </a>
 
     </div>
 

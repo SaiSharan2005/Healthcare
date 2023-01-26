@@ -1,0 +1,124 @@
+{% extends 'main.html' %}
+{% block content%}
+<h1>Your Medical Form</h1>
+<h2>This is your Medical Report </h2>
+<div class="medical_form_show">
+    <div class="medi_detail">
+        <div class="label">
+            <p> Person name:</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.person}}
+            </p>
+        </div>
+    </div>
+    <br>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Description:</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.description}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Report name:</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.Report_name}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Hospital:</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.Hospital}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Doctor Name:</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.Doctor_name}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Date of scan :</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.Date_of_scan}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Date Recieved :</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.Date_of_recieved}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Presciption By Doctor :</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.doctor_prescription}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p>Blood Pressure :</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.Blood_pressure}}
+            </p>
+        </div>
+    </div>
+    <div class="medi_detail">
+        <div class="label">
+            <p> Sugar Level :</p>
+        </div>
+        <div class="value">
+            <p>
+                {{ data_medi.Sugar_level}}
+            </p>
+        </div>
+    </div>
+
+</div>
+<h2>Extra Data</h2>
+<div class="medical_form_show">
+    {% for fields in extra_data_medi %}
+    <div class="medi_detail">
+        <div class="label">
+            <p>{{fields.parameter_name}}</p>
+        </div>
+        <div class="value">
+            <p>{{fields.parameters_value}}</p>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+{% endblock %}

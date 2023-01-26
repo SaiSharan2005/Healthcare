@@ -13,6 +13,11 @@ urlpatterns=[
     path('doctor_profile/',views.doctor_profile,name = "doctor_profile"),
     path('patient_profile/<str:pk>',views.patient_profile,name = "patient_profile"),
     path('medical_form/<str:pk>',views.medical_report,name="medical_form"),
+    path('extra_form/<str:pk>',views.extra_fields_med,name="extra_medical"),
+    path('medical_form_view/<str:pk>',views.medical_form_view,name="medical_form_view"),
+
+    path('Doctor_profile',views.consult_doctor,name="consult_doctor"),
+
 
 
 

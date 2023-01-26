@@ -64,12 +64,15 @@ class Patient(models.Model):
 class Medical_Report(models.Model):
     host = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     person = models.ForeignKey(Patient,on_delete=models.CASCADE,null=True)
+    description = models.TextField(max_length=300,default="None ")
+
     Report_name = models.CharField(max_length=100)    
     Hospital = models.CharField(max_length=100)
     Patient_name = models.CharField(max_length=100)
     Doctor_name = models.CharField(max_length=100)
     Date_of_scan = models.DateTimeField()
     Date_of_recieved = models.DateTimeField()
+    doctor_prescription= models.TextField(max_length=300,default="None ")
     Blood_pressure = models.IntegerField()
     Sugar_level = models.IntegerField()
 
@@ -77,6 +80,6 @@ class Medical_Report(models.Model):
         return self.Report_name
 
 class Extra_Values(models.Model):
-    Extra_parameters = models.OneToOneField(Medical_Report,on_delete= models.CASCADE,null=True)
+    Extra_parameters = models.ForeignKey(Medical_Report,on_delete= models.CASCADE,null=True)
     parameter_name = models.CharField(max_length=100)
     parameters_value = models.CharField(max_length=100)

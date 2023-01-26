@@ -82,6 +82,7 @@ nav {
 
 .add_home_detail .right_home_mem a {
   padding: 5px;
+  margin: 5px;
   text-decoration: none;
   color: black;
   background-color: #57dc5d;
@@ -123,30 +124,59 @@ nav {
 } */
 
 /* choice_acc_for_patient */
-.choice_acc{
-  margin:20px;
-  /* display:flex;
-  justify-content: center;
-  align-items:center;
-  flex-direction:row; */
-  width:90vw;
+.choice_acc {
+  margin: 30px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: column;
+  width: 90vw;
 
 }
-.choice_acc .child_acc{
-  margin:10px 20px;
+
+.choice_acc .parent_choice_acc {
+
+  display: flex;
+  /* justify-content: space-between; */
+  margin: 20px 20px;
+  padding: 4px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 80vw
+}
+.choice_acc .left {
+  display: flex;
+  justify-content: space-around;
+  align-items: space-around;
+}
+.choice_acc .left img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.choice_acc .child_acc {
+  width: 40vw;
+  margin: 0px 20px;
+  /* margin:20px 20px;
   padding:4px;
   border:2px solid black;
   border-radius: 10px;
-  width:80vw
+  width:80vw */
 }
-.choice_acc .child_acc a{
-  text-decoration:none;
-  color:black;
+
+.choice_acc .child_acc a {
+  text-decoration: none;
+  color: black;
   font-size: 30px;
 }
-.choice_acc .child_acc p{
+
+.choice_acc .child_acc p {
   font-size: 20px;
 
+}
+.choice_acc .child_acc .p-10px {
+  font-size: 15px;
 }
 
 /* doctor_profile */
@@ -159,7 +189,7 @@ nav {
   text-align: center;
 }
 
-.profile-picture img{
+.profile-picture img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
@@ -181,4 +211,73 @@ nav {
 
 .profile-info h2 {
   margin-top: 30px;
+}
+
+/* patient profile medical report */
+
+.medical_show {
+  margin: 20px 20px;
+  padding: 2px 30px;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  justify-content: space-between;
+}
+
+.medical_show .box2 {
+  /* display:flex; */
+  margin: 10px 20px;
+  padding: 7px 5px;
+  border: 2px black solid;
+  border-radius: 10px;
+
+}
+
+
+.medical_show .box2 h3{
+  margin:2px 0px 6px 10px;
+}
+a {
+  text-decoration: none;
+  color: black
+}
+
+.medical_show .box2 p {
+  margin:0px 3vw;
+}
+
+
+/* medical recipt */
+
+.medical_form_show {
+  width: 90vw;
+  margin: 5vw;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  border: 2px black solid;
+  border-radius: 20px;
+  justify-content: space-around;
+}
+
+.medical_form_show .medi_detail {
+  width: 40vw;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+
+.medical_form_show .medi_detail .label {
+  margin: 5px 20px;
+  font-size: 25px;
+  font-style: bold;
+  display:flex;
+  align-items:center;
+}
+
+.medical_form_show .medi_detail .value {
+  margin: 5px 20px;
+  display:flex;
+  align-items:center;
 }

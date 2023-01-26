@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="extra_medi_data">
+    <div class="extra_medi_data_parent">
+        <div class="extra_medi_data_child_left">
+            <p>Name of Person</p>
+        </div>
+        <div class="extra_medi_data_child_right">
+            <p>{{form_data.person}}</p>
+        </div>
+    </div>
+    <div class="extra_medi_data_parent">
+        <div class="extra_medi_data_child_left">
+            <p>Repot Name</p>
+        </div>
+        <div class="extra_medi_data_child_right">
+            <p>{{form_data.Report_name}}</p>
+        </div>
+    </div>
+
+
+</div>
+
+{% for fields in form %}
+<div class="extra_medi_data">
+    <div class="extra_medi_data_parent">
+        <div class="extra_medi_data_child_left">
+            <p>{{fields.parameter_name}}
+            <p>
+        </div>
+        <div class="extra_medi_data_child_right">
+            <p>{{fields.parameters_value}}</p>
+        </div>
+    </div>
+</div>
+
+
+{%endfor%}
+
+<form method = "POST">
+{% csrf_token %}
+{% for fields in form_entry %}
+    <div class = "Add_value_medi">
+        {{fields.label}}
+    </div>
+    <div>
+        {{fields}}
+    </div>
+{% endfor %}
+<button name = "choice">Save It</button>
+<input type="submit" value="Add" >
+
+</form>
+
+{% endblock content %}

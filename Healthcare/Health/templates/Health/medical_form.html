@@ -15,19 +15,12 @@
             </div>
             {% endfor %}
         </div>
-        <div class="normal_medical">
-            {% for field in form_extra %}
-            <div class="">
-                {{field.label}}
-            </div>
-            <div>
-                {{field}}
-            </div>
-            {% endfor %}
-        </div>
+        <button name = "Add_extra_value">Add Extra Values</button>
         <input type="submit" value="Save Form">
 </div>
 </form>
 
 
 {% endblock content %}
+
+
